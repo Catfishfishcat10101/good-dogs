@@ -1,0 +1,126 @@
+.dog {
+  border: none;
+  padding: 20px;
+  margin: 20px auto;
+  display: inline-block;
+  text-align: left;
+  background-color: rgb(200, 200, 200);
+  box-shadow: 20px 20px 20px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  width: auto;
+}
+
+.dog h2 {
+  margin: 0;
+  font-size: 30px;
+  text-align: left;
+}
+  
+.sprite {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  display: block;
+}
+
+.dog img {
+  width: auto;
+  height: 150px;
+  border-radius: 50%;
+  margin: 90px auto;
+  display: block;
+}
+
+.stats {
+  margin-top: 125px;
+}
+
+.stat {
+  margin-bottom: 30px;
+}
+
+.stat label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.stat-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 50px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.buttons button {
+  margin: 4px;
+  padding: 5px 20px;
+  font-size: 20px;
+  background-color: #008CBA;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:hover {
+  background-attachment: #007BB5;
+  transform: scale(1.05);
+}
+
+.dog-image {
+  transition: transform 0.5s ease;
+}
+
+.move {
+  animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+.jump {
+  animation: jump 1s infinite;
+}
+
+@keyframes jump {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.wag-tail {
+  animation: wag-tail 1s infinite;
+}
+
+@keyframes wag-tail {
+  0%,100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+.Toastify__toast-container {
+  font-size: 16px;
+}
