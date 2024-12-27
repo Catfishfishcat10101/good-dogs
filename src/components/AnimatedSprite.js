@@ -1,23 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './AnimatedSprite.css';
-
-const AnimatedSprite = ({ srcFolder,frameCount,frameWidth,frameHeight,duration }) => {
-  const [frame, setFrame] = useState(0);
+  const [currentFrame, setCurrentFrame] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setFrame(frame => (frame+1)%frameCount);
-    }, duration/frameCount);
-		
- return () => clearInterval(interval);
-  }, [frameCount,duration]);
-	
-	const src =`${srcFolder}/frame${frame + 1}.png`;
-
-  const style = {
-    width:`${frameWidth}px`,
-    height:`${frameHeight}px`
+    const intervalId = setInterval(() => {
+      setCurrentFrame((prevFrame) => (prevFrame + 1) % frames);
+    }, animationSpeed);
+// cleanup function to clear the interval
+    return () => {
+      clearInterval(intervalId);
   };
-};
-
-export default AnimatedSprite;
+  }), [frames, animationSpeed] (
+      style={
+        width: `${width}px`,
+        height: `${height}px`,
+        backgroundImage: `url(${src})`,
+        backgroundPosition: `-${currentFrame * width}px 0`,
+      }),
+      
+      

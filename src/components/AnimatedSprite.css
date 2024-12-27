@@ -1,4 +1,5 @@
-.sprite {
-	display: block;
+.animated-sprite {
 	background-repeat: no-repeat;
+	background-size: cover;
+	transition: background-position 0.2s ease;
 }
