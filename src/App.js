@@ -33,4 +33,9 @@ const App = () => {
   );
 };
 
+function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('show');
+}
+
 export default App;
