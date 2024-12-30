@@ -44,6 +44,19 @@ p {
   background-color: #ff6347;
 }
 
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px, 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color: 0.3s;
+}
+
+.bth:hover {
+  background-color: #45a049;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
