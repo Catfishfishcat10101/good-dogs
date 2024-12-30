@@ -1,3 +1,10 @@
+@media (max-width: 760px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
 .animated-sprite {
 	background-repeat: no-repeat;
 	background-size: cover;
